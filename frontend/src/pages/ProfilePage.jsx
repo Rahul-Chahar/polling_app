@@ -95,7 +95,7 @@ const ProfilePage = () => {
     return <div className="text-center text-gray-600 py-10">Could not load profile data.</div>;
   }
 
-  const imageBaseUrl = import.meta.env.VITE_APP_API_URL ? import.meta.env.VITE_APP_API_URL.replace('/api', '') : 'http://localhost:3000';
+  const imageBaseUrl = import.meta.env.VITE_APP_API_URL ? import.meta.env.VITE_APP_API_URL.replace('/api', '') : 'https://polling-app-fme4.onrender.com';
   const profilePicUrl = profileData.profilePicture.startsWith('http')
                           ? profileData.profilePicture
                           : `${imageBaseUrl}${profileData.profilePicture}`;

@@ -135,7 +135,7 @@ const CommentSection = ({ pollId }) => {
 
   useEffect(() => {
   
-    const newSocket = io(import.meta.env.VITE_APP_SOCKET_URL || 'http://localhost:5000');
+    const newSocket = io(import.meta.env.VITE_APP_SOCKET_URL || 'https://polling-app-fme4.onrender.com');
     setSocket(newSocket);
 
     newSocket.emit('join_poll', pollId);
