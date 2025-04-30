@@ -54,9 +54,11 @@ app.use((err, req, res, next) => {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173", // Make sure CLIENT_URL is correct in your environment file
+    origin: process.env.CLIENT_URL || "https://your-vercel-app.vercel.app",  // Make sure CLIENT_URL is correct in your environment file
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"], // Include any custom headers you might be sending
+    credentials: true,
+
   },
 });
 
